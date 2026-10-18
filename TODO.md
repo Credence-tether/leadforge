@@ -13,6 +13,7 @@
 - [x] Environment-aware Supabase SSR clients, session refresh middleware, protected dashboard routing, sign-in, sign-up, password reset, and OAuth callback routes.
 - [x] Zod-validated `/api/leads` GET/POST handler with demo fallback and authenticated organization scoping.
 - [x] Secret-free `.env.example`, setup-status endpoint, and runtime verification for auth routes and demo API behavior.
+- [x] Connected the active Supabase project, verified its existing RLS-backed schema, and aligned live lead creation with its columns and source constraints.
 
 ## Next implementation outcomes
 - [ ] Add organization bootstrap, role checks, sign-out, and member invitation flows on top of the SSR auth foundation.
@@ -25,7 +26,7 @@
 - [ ] Add boundary and cross-organization tests; never send real email in automated tests.
 
 ## Demo/live boundary
-This repository slice is intentionally usable in demo mode. Supabase, Gmail, n8n, and AI are not claimed live until their credentials and deployment configuration are supplied and tested. No raw credential is stored in the repository or shown in the UI.
+This repository slice is intentionally usable in demo mode. The connected Supabase project is now live-auth ready in this sandbox through an ignored `.env.local`; Gmail, n8n, and AI are not claimed live until their credentials and deployment configuration are supplied and tested. No raw credential is stored in the repository or shown in the UI.
 
 ## Local verification
 
