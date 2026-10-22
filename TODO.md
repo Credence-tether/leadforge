@@ -14,6 +14,7 @@
 - [x] Zod-validated `/api/leads` GET/POST handler with demo fallback and authenticated organization scoping.
 - [x] Secret-free `.env.example`, setup-status endpoint, and runtime verification for auth routes and demo API behavior.
 - [x] Connected the active Supabase project, verified its existing RLS-backed schema, and aligned live lead creation with its columns and source constraints.
+- [x] Enabled the connected Gmail integration and updated Settings to show Gmail as connected with human approval required before sending.
 
 ## Next implementation outcomes
 - [ ] Add organization bootstrap, role checks, sign-out, and member invitation flows on top of the SSR auth foundation.

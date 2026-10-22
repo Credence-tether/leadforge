@@ -9,3 +9,5 @@ To enable live authentication, copy `.env.example` to `.env.local` and provide `
 The public auth routes are `/sign-in`, `/sign-up`, and `/reset-password`. The `/api/leads` endpoint validates create requests with Zod and scopes live reads and writes through the authenticated user’s organization membership. No service-role key is required by the browser, and no secret values belong in `NEXT_PUBLIC_*` variables.
 
 The connected Supabase project is the active `automation` project in `eu-west-1`. It already contains the organizations, organization members, leads, lead activities, and follow-up task tables with RLS enabled, so the live database schema is treated as authoritative. The repository migration remains a fresh-project reference and should not be applied over the connected database without a reviewed reconciliation migration.
+
+Gmail is enabled through the connected Gmail integration for approved outreach. LeadForge keeps the approval gate active: configuring Gmail does not send any message, and a lead email must still be reviewed and explicitly approved before dispatch. The Settings screen reflects this state as `Connected` with the approval gate active.
